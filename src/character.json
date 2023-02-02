@@ -1,0 +1,27 @@
+[
+     {
+        "id":1,
+        "title": "Maleificent",
+        "movie": "Sleeping Beauty"
+     },
+     {
+      "id":2,
+      "title": "Jafar",
+      "movie": "Aladdin"
+     },
+     {
+      "id":3,
+      "title": "Evil Queen",
+      "movie": "Snow White and the seven dawrfs"
+    },
+    {
+      "id":4,
+      "title": "Urslla",
+      "movie": "Little Marmaid"
+    },
+    {
+      "id":5,
+      "title": "Scar",
+      "movie": "Lion King"
+    } 
+]

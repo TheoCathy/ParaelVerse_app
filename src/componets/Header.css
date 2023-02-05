@@ -108,8 +108,6 @@ padding: 0px 10px;
 
 .card-wrapper{
     display: flex;
-    /* grid-template-columns: repeat(auto-fit, minmax(12rem, 14rem)); */
-    /* grid-template-rows:  19.5rem 19.5rem; */
     gap: 2rem;
     justify-content: center;
     width: 100%;

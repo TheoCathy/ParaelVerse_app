@@ -6,7 +6,7 @@ export const Favourite = () => {
   return (
     <>
     <Navbar/>
-    <div>
+    <div className='favs'>
       <h1> YOU DON'T HAVE ANY FAVOURTES YET 😉...</h1>
     </div>
     <Footer/>

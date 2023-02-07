@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Pages.css";
 import { useNavigate } from 'react-router-dom';
-import axios from "./componets/Utility/axios";
+// import axios from "./componets/Utility/axios";
 import CharacterBio from "./character.json"
 // import { useEffect } from "react";
 
@@ -26,11 +26,12 @@ export const Card = () => {
 
   return (
     <>
-        {
-          CharacterBio.map(character=>{
+    {/* <div className="flex flex-wrap flex-col gap-8 justify-center" > */}
+    <div className="card-wrapper" >
+         { CharacterBio.map(character=>{
             return(
-          <div className="card-wrapper"  >
-        <div className="cards" key={character.id}>
+        <div className="cards"
+         key={character.id}>
           <div className="card-body" key={character.id}>
               <img src="/images/DisneyQueenHearts.jpeg" alt="image here" />
             <div className="card-title">
@@ -44,11 +45,11 @@ export const Card = () => {
             </div>
           </div>
         </div>
-      </div>
+      
             )
           })
         }
-        
+         </div>
     </>
   );
 };

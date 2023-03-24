@@ -26,14 +26,13 @@ export const Card = () => {
 
   return (
     <>
-    {/* <div className="flex flex-wrap flex-col gap-8 justify-center" > */}
     <div className="card-wrapper" >
          { CharacterBio.map(character=>{
             return(
         <div className="cards"
          key={character.id}>
           <div className="card-body" key={character.id}>
-              <img src="/images/DisneyQueenHearts.jpeg" alt="image here" />
+              <img src= {character.image} alt="image here" />
             <div className="card-title">
               <h2 className="cardd-h">{character.title}</h2>
               <p className="cardd-p"> {character.movie}</p>

@@ -1,53 +1,54 @@
- @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Poppins:ital,wght@0,200;0,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Poppins:ital,wght@0,200;0,400;1,700&display=swap");
 
-
-*{
-    margin: 0px;
+* {
+  margin: 0px;
   padding: 0px;
 }
-html{
-    /* background-image: linear-gradient(#5B2BB9, #3A0909, #DB0000); */
-    background-image: linear-gradient(#425CE0, #5B2BB9, #693567, #381130);
-    background-repeat: no-repeat;
-    scroll-behavior: smooth;
-    transition: 0.6s;
-    font-family: 'Poppins', sans-serif;
+html {
+  /* background-image: linear-gradient(#5B2BB9, #3A0909, #DB0000); */
+  background-image: linear-gradient(#425ce0, #5b2bb9, #693567, #381130);
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+  transition: 0.6s;
+  font-family: "Poppins", sans-serif;
 }
-.header{
-justify-content: space-between;
-/* background-image: linear-gradient(rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.51)), */
-background-image: linear-gradient(rgba(0, 0, 0, 0.513), rgba(47, 21, 94, 0.51)),
-url('/public/images/starynight.jpg');
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-box-shadow:  0 2px 20px #30198aba;
+.header {
+  justify-content: space-between;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.51)), */
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.513),
+      rgba(47, 21, 94, 0.51)
+    ),
+    url("/public/images/starynight.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 2px 20px #30198aba;
+}
+.navbar {
+  padding: 10px 20px;
+  /* margin: 10px; */
+  display: flex;
+  justify-content: space-between;
+  color: azure;
+}
+.logo {
+  font-size: 30px;
+  font-family: "Mouse Memoirs", sans-serif;
+  margin-left: 60px;
+  /* text-align: left; */
+}
+.navbar ul {
+  display: flex;
+  align-content: flex-end;
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 0px 10px;
+}
 
-}
-.navbar{
-    padding: 10px 20px;
-    /* margin: 10px; */
-    display: flex;
-    justify-content: space-between;
-    color: azure;
-}
-.logo{
-    font-size: 30px;
-    font-family: 'Mouse Memoirs', sans-serif;
-    margin-left: 60px;
-    /* text-align: left; */
-}
-.navbar ul{
-display: flex;
-align-content: flex-end;
-margin-left: 10px;
-text-decoration: none;
-padding: 0px 10px;
-}
-
-.navbar ul li{
+.navbar ul li {
   list-style: none;
-  align-items:center;
+  align-items: center;
   padding: 0px 50px;
   color: #ffffff;
   position: relative;
@@ -55,120 +56,113 @@ padding: 0px 10px;
   display: flex;
   margin-right: 20px;
 }
-.navbar-btn :hover{
-    cursor: pointer;
-    color: rgb(246, 185, 124);
-    font-size: large;
+.navbar-btn :hover {
+  cursor: pointer;
+  color: rgb(246, 185, 124);
+  font-size: large;
 }
 
-
-.search-Sec{
-    text-align: center;
-    margin: auto;
-    display: flex;
-    padding: 8px 10px;
-    border-radius: 50px;
-    width: 100%;
-    max-width: 500px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
+.search-Sec {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  padding: 8px 10px;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
 }
- input {
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 10px 5px;
-
+input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 5px;
 }
 
-.search-icon{
-    position: relative;
-    padding: 5px;
-    margin: 2px;
+.search-icon {
+  position: relative;
+  padding: 5px;
+  margin: 2px;
   font-size: larger;
-
 }
-.search-icon :hover{
-    cursor: pointer;
+.search-icon :hover {
+  cursor: pointer;
 }
-.Intro-h{
-    color: azure;
-    padding: 5px 5px;
-    /* margin-bottom: 20px; */
-    margin-top: 20px;
-    font-size: 30px;
-    text-align: center;
-    
+.Intro-h {
+  color: azure;
+  padding: 5px 5px;
+  /* margin-bottom: 20px; */
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
-
-.Intro-p{
-    color: azure;
-    padding: 5px 0px 50px 0px;
-    margin: 5px 0px 0px 0px;
-    text-align: center;
-    
+.Intro-p {
+  color: azure;
+  padding: 5px 0px 50px 0px;
+  margin: 5px 0px 0px 0px;
+  text-align: center;
 }
 
-.card-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    width: 100%;
-    /* height: 1229px; */
-    /* height: 500px; */
-   
-    align-content: fill;
-    margin: 40px 0px 5px 0px ;
-}
- .card-body{
-    overflow: hidden;
-    box-shadow: 0 2px 20px rgb(161, 161, 161);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: 200ms ease-in-out;
-    background-color: #fff;
-    padding: 10px;
-    margin: 5px;
-    width: 213px;
-    height: 295px;
- }
- .cards :hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px 0px ;
-    
- }
- img :hover{
-    transform: none;
-    box-shadow: none;
- }
- .card-title :hover{
-    transform: none;
-    box-shadow: 0px 0px 0px 0px;
- }
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  /* height: 1229px; */
+  /* height: 500px; */
 
-  img{
-    object-fit: fill;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
- }
-
-.card-title{
-    padding: 5px 0px 0px 5px;
-    margin: 5px 0px 0px 0px;
+  align-content: fill;
+  margin: 40px 0px 5px 0px;
 }
- .Footer{
-    padding: 50px 10px;
-    margin-top: 20px;
-    background-color: #6a42e06e;
-    color: #fff;
-    text-align: center;
-    font-size: small;
- }
+.card-body {
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgb(161, 161, 161);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px;
+  width: 213px;
+  height: 295px;
+}
+.cards :hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px rgb(207, 243, 243), 
+}
+img :hover {
+  transform: none;
+  box-shadow: none;
+}
+.card-title :hover {
+  transform: none;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+img {
+  object-fit: fill;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-title {
+  padding: 5px 0px 0px 5px;
+  margin: 5px 0px 0px 0px;
+}
+.Footer {
+  padding: 50px 10px;
+  margin-top: 20px;
+  background-color: #6a42e06e;
+  color: #fff;
+  text-align: center;
+  font-size: small;
+}

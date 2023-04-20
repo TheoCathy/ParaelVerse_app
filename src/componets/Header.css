@@ -31,12 +31,20 @@ html {
   display: flex;
   justify-content: space-between;
   color: azure;
+  
 }
 .logo {
-  font-size: 30px;
+  font-size: 45px;
   font-family: "Mouse Memoirs", sans-serif;
   margin-left: 60px;
   /* text-align: left; */
+  color: rgb(23, 12, 1);
+  border-radius: 50%;
+  /* font-size: large; */
+  background-color: rgba(210, 199, 188, 0.954);
+  box-shadow: 0px 0px 5px rgba(237, 204, 172, 0.728), 0px 0px 20px rgb(237, 205, 172),
+    0px 0px 40px rgba(237, 204, 172, 0.503), 0px 0px 100px rgba(237, 204, 172, 0.771);
+
 }
 .navbar ul {
   display: flex;
@@ -44,6 +52,7 @@ html {
   margin-left: 10px;
   text-decoration: none;
   padding: 0px 10px;
+  border-radius: 20px;
 }
 
 .navbar ul li {
@@ -54,12 +63,16 @@ html {
   position: relative;
   transition: all 0.6s;
   display: flex;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 .navbar-btn :hover {
   cursor: pointer;
-  color: rgb(246, 185, 124);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
   font-size: large;
+  /* background-color: rgb(182, 148, 114); */
+  box-shadow: 0px 0px 5px rgba(219, 202, 186, 0.728), 0px 0px 20px rgb(221, 200, 178),
+    0px 0px 40px rgba(236, 217, 197, 0.454), 0px 0px 100px rgba(243, 220, 198, 0.771);
 }
 
 .search-Sec {
@@ -135,7 +148,7 @@ input {
 }
 .cards :hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 5px rgb(207, 243, 243), 
+  box-shadow: 0px 0px 5px rgb(207, 243, 243);
 }
 img :hover {
   transform: none;

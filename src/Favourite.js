@@ -10,7 +10,7 @@ export const Favourite = () => {
       <div className="favs">
         <h1> YOU DON'T HAVE ANY FAVOURITES YET 😉...</h1>
         <h6>
-          <button className="absolute bottom-0 left-0 text-base">
+          <button className="relative bottom-0 left-0 text-base">
             {" "}
             Pssst... Have you submitted a story yet?
           </button>

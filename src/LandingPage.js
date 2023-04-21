@@ -5,13 +5,15 @@ import { Footer } from "./componets/Footer";
 // import  "./index.css";
 import "./Pages.css";
 import { SubmitLink } from "./SubmitLink";
+import PaginationOutlined from "./componets/Utility/Pagenation";
 
 export const LandingPage = () => {
   return (
     <>
       <Header />
       <Card />
-     <SubmitLink/>
+      <PaginationOutlined />
+      <SubmitLink />
       <Footer />
     </>
   );

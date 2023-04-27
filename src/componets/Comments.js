@@ -21,20 +21,3 @@ export const Comments = () => {
 
 
 
-// const LikeButton = () => {
-//   const [likes, setLikes] = useState(0);
-
-//   const handleLike = () => {
-//     setLikes(likes + 1);
-//   };
-
-//   return (
-//     <div className="like-button" onClick={handleLike}>
-//       <FontAwesomeIcon icon={faHeart} />
-//       <span>{likes}</span>
-//     </div>
-//   );
-// };
-// mr-20px,pr-20px mt-7"
-// export default LikeButton;
-

@@ -16,9 +16,14 @@ export default function PaginationOutlined() {
       /> */}
       <Pagination
         count={5}
-        variant="outlined"
+        variant="contained"
         disabled
-        style={{ margin: "20px", placeContent: "center" }}
+        style={{
+          marginTop: "80px",
+          marginLeft: "550px",
+          marginBottom: "50px",
+          color: "primary",
+        }}
       />
     </Stack>
   );

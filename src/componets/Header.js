@@ -3,8 +3,8 @@ import { Navbar } from "./Navbar";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-// import { CharacterStory } from "../CharacterStory";
-// import CharacterBio from "./character.json";
+import { CharacterStory } from "../CharacterStory";
+import { CharacterBio } from "../character";
 
 export const Header = () => {
   // const getFilteredItems = (query, items) => {
@@ -20,6 +20,8 @@ export const Header = () => {
 
   // const filteredItems = getFilteredItems(query, items);
 
+  // const [query, setQuery] = useState("");
+  // console.log(CharacterBio.filter(CharacterBio.title.includes()));
   return (
     <>
       <div className="header">

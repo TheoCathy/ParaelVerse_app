@@ -7,7 +7,7 @@ import "./Pages.css";
 import { SubmitLink } from "./SubmitLink";
 import PaginationOutlined from "./componets/Utility/Pagenation";
 
-export const LandingPage = () => {
+export const LandingPage = (title) => {
   return (
     <>
       <Header />

@@ -28,14 +28,15 @@ export const SubmitLink = () => {
           target="_blank"
           endIcon={<SendIcon />}
           style={{
-            backgroundColor: "rgba(319, 202, 120, 0.728)",
-            boxShadow: "0px 0px 5px rgba(219, 202, 186, 0.728)",
+            backgroundColor: "rgba(319, 202, 120, 353)",
+            marginTop: "80px",
+            marginRight: "5px",
             borderRadius: "30px",
-            font:"mono",
+            font: "mono",
           }}
           className="hover-rgba(619, 212, 156, 0.345) w-60 h-12 mt-10"
         >
-           Submit your story
+          Submit your story
         </Button>
       </div>
     </>

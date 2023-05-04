@@ -7,21 +7,6 @@ import { CharacterStory } from "../CharacterStory";
 import { CharacterBio } from "../character";
 
 export const Header = () => {
-  // const getFilteredItems = (query, items) => {
-  //   if (!query) {
-  //     return items;
-  //   }
-  //   return items.filter((character) => character.title.includes(query));
-  // };
-
-  // const [query, setQuery] = useState("");
-  // const { character } = CharacterBio;
-  // const { items } = title;
-
-  // const filteredItems = getFilteredItems(query, items);
-
-  // const [query, setQuery] = useState("");
-  // console.log(CharacterBio.filter(CharacterBio.title.includes()));
   return (
     <>
       <div className="header">
@@ -31,7 +16,6 @@ export const Header = () => {
             className="searchBar"
             placeholder="search Name..."
             type="text"
-            // onChange={(e) => setQuery(e.target.value)}
           />
           <div className="search-icon">
             <FontAwesomeIcon

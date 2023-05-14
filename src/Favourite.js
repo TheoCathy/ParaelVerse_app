@@ -3,7 +3,7 @@ import React from "react";
 import { Footer } from "./componets/Footer";
 import { Navbar } from "./componets/Navbar";
 import { SubmitLink } from "./SubmitLink";
-import "./Pages.css"
+import "./Pages.css";
 
 export const Favourite = () => {
   return (
@@ -27,8 +27,8 @@ export const Favourite = () => {
           {/* </button> */}
         </h6>
       </div>
-      <SubmitLink style={{ marginTop: 20 }} />
-      <Footer style={{ marginTop: 50 }} />
+      <SubmitLink style={{ marginTop: 70 }} />
+      <Footer />
     </>
   );
 };

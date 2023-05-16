@@ -9,7 +9,7 @@ export const SubmitLink = () => {
     <>
       <div
         className="flex space-y-6 place-content-center m-4 border-2 rounded-lg bg-blue-300 opacity-80"
-        style={{ width: "550px", height: "250px", marginLeft: "400px" }}
+        style={{ width: "550px", height: "250px", marginLeft: "400px", marginTop: "300px"}}
       >
         <div>
           <img

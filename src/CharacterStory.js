@@ -1,12 +1,9 @@
 import React, { useState } from "react";
+// import { useHistory } from 'react-router-dom';
 import { Navbar } from "./componets/Navbar";
 import { Footer } from "./componets/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faComment,
-  faThumbsUp,
-  faStar,
-} from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp, faStar } from "@fortawesome/free-solid-svg-icons";
 // import CharacterBio from "./character.json";
 import { Comments } from "./componets/Comments";
 import { SubmitLink } from "./SubmitLink";
@@ -19,6 +16,12 @@ export const CharacterStory = () => {
       setLikes(likes + (isLike ? -1 : 1));
       setIsLike(!isLike);
     };
+
+  const [isFavorite, setIsFavorite] = useState(false);
+  // const history = useHistory();
+  const handleFavoriteClick = () => {
+    setIsFavorite(!isFavorite);
+  };
 
   return (
     <>
@@ -41,9 +44,8 @@ export const CharacterStory = () => {
               et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
               enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
               tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              ante velit ac et. A faucibus faucibus semper urna odio etiam
-              praesent. Vel enim enim suspendisse quis. Lorem ipsum dolor sit
-              amet consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
+              Vel enim enim suspendisse quis. Lorem ipsum dolor sit amet
+              consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
               posuere amet urna ante velit ac et. A faucibus faucibus semper
               urna odio etiam praesent. Vel enim enim suspendisse quis. lorem
               loremLorem ipsum dolor sit amet consectetur. Id tellus massa
@@ -51,29 +53,17 @@ export const CharacterStory = () => {
               et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
               enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
               tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              ante velit ac et. A faucibus faucibus semper urna odio etiam
-              praesent. Vel enim enim suspendisse quis. Lorem ipsum dolor sit
-              amet consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
+              Vel enim enim suspendisse quis. Lorem ipsum dolor sit amet
+              consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
               posuere amet urna ante velit ac et. A faucibus faucibus semper
-              urna odio etiam praesent. Vel enim enim suspendisse quis.
-              lorem loremLorem ipsum dolor sit amet consectetur. Id tellus massa
+              urna odio etiam praesent. Vel enim enim suspendisse quis. lorem
+              loremLorem ipsum dolor sit amet consectetur. Id tellus massa
               dapibus eu ultrices. Sagittis in posuere amet urna ante velit ac
               et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
               enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
               tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              ante velit ac et. A faucibus faucibus semper urna odio etiam
-              praesent. Vel enim enim suspendisse quis. Lorem ipsum dolor sit
-              amet consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
-              posuere amet urna ante velit ac et. A faucibus faucibus semper
-              urna odio etiam praesent. Vel enim enim suspendisse quis.
-              lorem loremLorem ipsum dolor sit amet consectetur. Id tellus massa
-              dapibus eu ultrices. Sagittis in posuere amet urna ante velit ac
-              et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
-              enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
-              tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              ante velit ac et. A faucibus faucibus semper urna odio etiam
-              praesent. Vel enim enim suspendisse quis. Lorem ipsum dolor sit
-              amet consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
+              Vel enim enim suspendisse quis. Lorem ipsum dolor sit amet
+              consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
               posuere amet urna ante velit ac et. A faucibus faucibus semper
               urna odio etiam praesent. Vel enim enim suspendisse quis.
               <div className="mr-20px,pr-20px mt-7">
@@ -87,8 +77,12 @@ export const CharacterStory = () => {
                   />
                 </button>
 
-                <button className="ml-8 position-space justify-around">
-                  Favorite this story
+                <button
+                  className={`ml-8 position-space justify-around
+                ${isFavorite ? "text-yellow-500" : "text-gray-200"}`}
+                  onClick={handleFavoriteClick}
+                >
+                  Favorite
                   <FontAwesomeIcon
                     icon={faStar}
                     style={{ fontSize: "28px", marginLeft: "8px" }}

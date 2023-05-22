@@ -3,25 +3,20 @@ import "./Pages.css";
 import { useNavigate } from "react-router-dom";
 // import axios from "./componets/Utility/axios";
 import { CharacterBio } from "./character";
-// import { useEffect } from "react";
+import axios from "axios";
 
 export const Card = () => {
   const navigate = useNavigate();
 
   const [characters, setCharacters] = useState([]);
-  //  const [currentPage, setCurrentPage] = useState(1);
-  //  const [postPerPage, setPostPerPage] = useState(6);
+  const [selectedCharacterId, setSelectedCharacterId] = useState(null);
 
-  // useEffect(() => {
-  //   axios.get("/characters")
-  //     .then(res => console.log(res.data.data))
-  // .then(res => setCharacters (res.data.id))
-  // .catch(err => console.log(err))
-  // },[])
-
-  // const lastPageIndex = currentPage * postPerPage;
-  // const firstPageIndex = lastPageIndex - postPerPage;
-  // const currentPost =characters.slice(firstPageIndex, lastPageIndex);
+  const handleStoryClick = (characterId) => {
+    setSelectedCharacterId(characterId);
+    // navigate("/story");
+    navigate(`/story/${characterId}`);
+  };
+  // const selectedCharacter = characters.find((character) => character.id === selectedCharacterId);
 
   return (
     <>
@@ -36,14 +31,16 @@ export const Card = () => {
                   <p className="cardd-p"> {character.movie}</p>
                   <button
                     className="story-btn"
-                    onClick={() => {
-                      navigate("/story");
-                    }}
+                    // onClick={() => {
+                    //   navigate("/story");
+                    // }}
+                    onClick={() => handleStoryClick(character.id)}
                   >
                     Story
                   </button>
                 </div>
               </div>
+             
             </div>
           );
         })}

@@ -1,24 +1,37 @@
 import React, { useState } from "react";
-// import { useHistory } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { Navbar } from "./componets/Navbar";
 import { Footer } from "./componets/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faStar } from "@fortawesome/free-solid-svg-icons";
-// import CharacterBio from "./character.json";
+import { CharacterBio } from "./character";
 import { Comments } from "./componets/Comments";
 import { SubmitLink } from "./SubmitLink";
 import "./Pages.css";
 
 export const CharacterStory = () => {
-  const [likes, setLikes] = useState(0),
-    [isLike, setIsLike] = useState(false),
-    onlikebtnclick = () => {
-      setLikes(likes + (isLike ? -1 : 1));
-      setIsLike(!isLike);
-    };
+  const { characterId } = useParams();
+  const selectedCharacterId = parseInt(characterId, 10);
 
+  console.log("selectedCharacterId:", selectedCharacterId);
+  console.log("CharacterBio:", CharacterBio);
+
+  // Find the selected character based on the characterId
+  const selectedCharacter = CharacterBio.find(
+    (character) => character.id.toString() === characterId
+  );
+
+  console.log("selectedCharacter:", selectedCharacter);
+
+  const [likes, setLikes] = useState(0);
+  const [isLike, setIsLike] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
-  // const history = useHistory();
+
+  const onLikeBtnClick = () => {
+    setLikes(likes + (isLike ? -1 : 1));
+    setIsLike(!isLike);
+  };
+
   const handleFavoriteClick = () => {
     setIsFavorite(!isFavorite);
   };
@@ -29,57 +42,28 @@ export const CharacterStory = () => {
         <Navbar />
 
         <div className="story-container">
-          {/* { CharacterBio.map(character=>{
-            return(
-   */}
           <span className="story-img">
-            <img src="/" alt="image here" />
-            <h3> Charater </h3>
+            <img src={selectedCharacter.image} alt="image here" />
+            <h3> {selectedCharacter.title}</h3>
           </span>
-          {/* )},  */}
           <>
             <h5 className="main-story">
-              lorem loremLorem ipsum dolor sit amet consectetur. Id tellus massa
-              dapibus eu ultrices. Sagittis in posuere amet urna ante velit ac
-              et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
-              enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
-              tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              Vel enim enim suspendisse quis. Lorem ipsum dolor sit amet
-              consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
-              posuere amet urna ante velit ac et. A faucibus faucibus semper
-              urna odio etiam praesent. Vel enim enim suspendisse quis. lorem
-              loremLorem ipsum dolor sit amet consectetur. Id tellus massa
-              dapibus eu ultrices. Sagittis in posuere amet urna ante velit ac
-              et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
-              enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
-              tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              Vel enim enim suspendisse quis. Lorem ipsum dolor sit amet
-              consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
-              posuere amet urna ante velit ac et. A faucibus faucibus semper
-              urna odio etiam praesent. Vel enim enim suspendisse quis. lorem
-              loremLorem ipsum dolor sit amet consectetur. Id tellus massa
-              dapibus eu ultrices. Sagittis in posuere amet urna ante velit ac
-              et. A faucibus faucibus semper urna odio etiam praesent. Vel enim
-              enim suspendisse quis. Lorem ipsum dolor sit amet consectetur. Id
-              tellus massa dapibus eu ultrices. Sagittis in posuere amet urna
-              Vel enim enim suspendisse quis. Lorem ipsum dolor sit amet
-              consectetur. Id tellus massa dapibus eu ultrices. Sagittis in
-              posuere amet urna ante velit ac et. A faucibus faucibus semper
-              urna odio etiam praesent. Vel enim enim suspendisse quis.
+              {selectedCharacter.story}
               <div className="mr-20px,pr-20px mt-7">
-                <button className={"" + (isLike ? "red" : "")}>
+                <button className={isLike ? "red" : ""}>
                   Likes {likes}
                   <FontAwesomeIcon
                     className=""
                     icon={faThumbsUp}
                     style={{ fontSize: "28px", marginLeft: "8px" }}
-                    onClick={onlikebtnclick}
+                    onClick={onLikeBtnClick}
                   />
                 </button>
 
                 <button
-                  className={`ml-8 position-space justify-around
-                ${isFavorite ? "text-yellow-500" : "text-gray-200"}`}
+                  className={`ml-8 position-space justify-around ${
+                    isFavorite ? "text-yellow-500" : "text-gray-200"
+                  }`}
                   onClick={handleFavoriteClick}
                 >
                   Favorite
@@ -99,4 +83,3 @@ export const CharacterStory = () => {
     </>
   );
 };
-// export default CharacterStory;

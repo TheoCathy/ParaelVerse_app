@@ -9,14 +9,10 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/favorite" element={<Favourite />} />
-        <Route path="/story" element={<CharacterStory />} />
+        <Route path="/story/:characterId" element={<CharacterStory />} />
       </Routes>
-
-    {/* <LandingPage /> */}
-    {/* <p>hello world</p> */}
     </>
   );
 }
 
 export default App;
-

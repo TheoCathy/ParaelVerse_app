@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { CharacterBio } from "./character";
 import axios from "axios";
 
-export const Card = () => {
+export const Card = ({characters}) => {
   const navigate = useNavigate();
 
-  const [characters, setCharacters] = useState([]);
+  // const [characters, setCharacters] = useState([]);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
 
   const handleStoryClick = (characterId) => {
@@ -21,7 +21,7 @@ export const Card = () => {
   return (
     <>
       <div className="card-wrapper">
-        {CharacterBio.map((character) => {
+        {characters.map((character) => {
           return (
             <div className="cards" key={character.id}>
               <div className="card-body" key={character.id}>

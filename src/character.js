@@ -1,7 +1,7 @@
 export const CharacterBio = [
   {
     id: 1,
-    title: "Maleificent",
+    title: "Maleficent",
     movie: "Sleeping Beauty",
     image: "/images/Profile_-_Maleficent.webp",
     story: "she ruled all the kingdoms",
@@ -25,7 +25,7 @@ export const CharacterBio = [
     title: "Urslla",
     movie: "Little Marmaid",
     image: "/images/Profile_-_Ursula.webp",
-    story: "loremsssssssss",
+    story: "Urslla married the Price in her human form and Ariel never spoke again",
   },
   {
     id: 5,

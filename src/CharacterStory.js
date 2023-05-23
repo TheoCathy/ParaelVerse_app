@@ -13,15 +13,13 @@ export const CharacterStory = () => {
   const { characterId } = useParams();
   const selectedCharacterId = parseInt(characterId, 10);
 
-  console.log("selectedCharacterId:", selectedCharacterId);
-  console.log("CharacterBio:", CharacterBio);
+ 
 
   // Find the selected character based on the characterId
   const selectedCharacter = CharacterBio.find(
     (character) => character.id.toString() === characterId
   );
 
-  console.log("selectedCharacter:", selectedCharacter);
 
   const [likes, setLikes] = useState(0);
   const [isLike, setIsLike] = useState(false);
@@ -44,7 +42,10 @@ export const CharacterStory = () => {
         <div className="story-container">
           <span className="story-img">
             <img src={selectedCharacter.image} alt="image here" />
-            <h3> {selectedCharacter.title}</h3>
+            <h3 className="text-white text-xl font-semibold p-6">
+              {" "}
+              {selectedCharacter.title}
+            </h3>
           </span>
           <>
             <h5 className="main-story">

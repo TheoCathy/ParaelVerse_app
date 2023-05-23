@@ -5,18 +5,18 @@ import { Navbar } from "./componets/Navbar";
 import { SubmitLink } from "./SubmitLink";
 import "./Pages.css";
 
-export const Favourite = (favoriteItems ) => {
+export const Favourite = (favoriteItems) => {
   return (
     <>
       <Navbar />
       <div className="favs">
         <h1> YOU DON'T HAVE ANY FAVOURITES YET 😉...</h1>
         <h2>Favorite Items</h2>
-      <ul>
-        {favoriteItems.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
+        <ul>
+          {/* {favoriteItems.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))} */}
+        </ul>
         <h6>
           {/* <button className="relative bottom-0 left-0 text-base"> */}
           {/* {" "} */}

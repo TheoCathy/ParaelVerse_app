@@ -3,10 +3,23 @@ import { Navbar } from "./Navbar";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { CharacterStory } from "../CharacterStory";
 import { CharacterBio } from "../character";
+import { Card } from "../Card";
 
 export const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
+
+  const handleSearch = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+
+    const filtered = CharacterBio.filter((character) =>
+      character.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredCharacters(filtered);
+  };
+
   return (
     <>
       <div className="header">
@@ -14,14 +27,13 @@ export const Header = () => {
         <div className="search-Sec">
           <input
             className="searchBar"
-            placeholder="search Name..."
+            placeholder="Search Name..."
             type="text"
+            value={searchQuery}
+            onChange={handleSearch}
           />
           <div className="search-icon">
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              // onClick={}
-            />
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
         </div>
         <div className="Intro">
@@ -30,9 +42,10 @@ export const Header = () => {
           </h3>
         </div>
         <div className="Intro-p">
-          <p>what if we lived their own side of the story...</p>
+          <p>What if we lived their own side of the story...</p>
         </div>
       </div>
+      <Card characters={filteredCharacters.length > 0 ? filteredCharacters : CharacterBio} />
     </>
   );
 };

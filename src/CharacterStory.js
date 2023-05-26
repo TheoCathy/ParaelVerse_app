@@ -41,7 +41,7 @@ export const CharacterStory = () => {
 
         <div className="story-container">
           <span className="story-img">
-            <img src={selectedCharacter.image} alt="image here" />
+            <img src={selectedCharacter.image} alt="img here" />
             <h3 className="text-white text-xl font-semibold p-6">
               {" "}
               {selectedCharacter.title}

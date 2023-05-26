@@ -5,10 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { CharacterBio } from "../character";
 import { Card } from "../Card";
+import PaginationOutlined from "./Utility/Pagenation";
+
+
 
 export const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleSearch = (event) => {
     const query = event.target.value;
@@ -19,6 +23,18 @@ export const Header = () => {
     );
     setFilteredCharacters(filtered);
   };
+  const itemsPerPage = 10; // Number of cards to display per page
+  const totalCards = CharacterBio.length; // Total number of cards
+  const totalPages = Math.ceil(totalCards / itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  // Logic to determine the range of cards to display based on the current page
+  // const startIndex = (currentPage - 1) * itemsPerPage;
+  // const endIndex = startIndex + itemsPerPage;
+  // const displayedCards = CharacterBio.slice(startIndex, endIndex);
 
   return (
     <>
@@ -45,7 +61,19 @@ export const Header = () => {
           <p>What if we lived their own side of the story...</p>
         </div>
       </div>
-      <Card characters={filteredCharacters.length > 0 ? filteredCharacters : CharacterBio} />
+      <Card
+        characters={
+          filteredCharacters.length > 0 ? filteredCharacters : CharacterBio
+        }
+        
+        currentPage={currentPage}
+        itemsPerPage={itemsPerPage}
+      />
+      <PaginationOutlined
+        totalPages={totalPages}
+        activePage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </>
   );
 };

@@ -31,11 +31,7 @@ export const Header = () => {
     setCurrentPage(page);
   };
 
-  // Logic to determine the range of cards to display based on the current page
-  // const startIndex = (currentPage - 1) * itemsPerPage;
-  // const endIndex = startIndex + itemsPerPage;
-  // const displayedCards = CharacterBio.slice(startIndex, endIndex);
-
+  
   return (
     <>
       <div className="header">
